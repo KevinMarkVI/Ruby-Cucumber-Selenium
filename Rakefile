@@ -1,5 +1,5 @@
 def run_tests(platform, browser, version, junit_dir)
-  system("platform=\"#{platform}\" browserName=\"#{browser}\" version=\"#{version}\" parallel_cucumber features -o \"--format junit --out #{junit_dir} --format pretty\" -n 20")
+  system("SET platform=\"#{platform}\" && SET browserName=\"#{browser}\" && SET version=\"#{version}\" && parallel_cucumber features -o \"--format junit --out #{junit_dir} --format pretty\" -n 20")
 end
 
 # Windows 8.1, Chrome 43
